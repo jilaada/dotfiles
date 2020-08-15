@@ -1,2 +1,12 @@
 # dotfiles
-should have done this a long time ago
+
+repo that I should have created yonks ago
+
+---
+
+now I'm paying the price 
+
+## zsh
+
+* simlink everything (.zsh/) to your home directory 
+* simlink .zshenv to your home directory
