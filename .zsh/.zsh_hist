@@ -1,0 +1,34 @@
+-h
+prompt -h
+rm -rf jilada.zsh.save
+ln -s ~/.zsh/prompts/jilada.zsh ~/.zsh/functions/prompt_setup
+pwd
+cd ..
+ks
+cd functions
+prompt_setup
+ln -s /home/jilada/.zsh/prompts/jilada.zsh prompt_setup
+nano /home/jilada/.zsh/prompts/jilada.zsh
+rm prompt_setup
+ln -s /home/jilada/.zsh/prompts/jilada.zsh prompt_jilada_setup
+ls -la functions
+nano prompts/jilada.zsh
+source .zshenv
+nano .zshrc
+ls -la
+source ~/.zsh/zshrc
+cd dotfiles
+cd .zsh
+cd prompts
+nano jilada.zsh
+source ~/.zsh/.zshrc
+source ~/.zshenv
+cd github
+nano ~/.zsh/.zshrc
+ls
+nano ~/.zsh/prompts/jilada.zsh
+exit
+ls
+cd github
+cd dotfiles
+sudo su
