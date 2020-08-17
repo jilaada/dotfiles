@@ -1,8 +1,11 @@
 # Set shell options
 setopt nomatch
+setopt prompt_subst
+setopt extended_history
+setopt append_history
+setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
-setopt prompt_subst
 
 # Unset shell options
 unsetopt autocd
@@ -18,8 +21,9 @@ prompt jilada
 
 # Aliases
 alias ls='ls --color=auto -N'
-alias git-log='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %<(50,trunc)%s'\'' --all'
-alias git-vlog='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %Cgreen%aD%Creset%n''          %C(bold blue)<%an>%Creset %<(80,trunc)%s'\'' --all'
+alias gs='git status'
+alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %<(50,trunc)%s'\'' --all'
+alias gvl='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %Cgreen%aD%Creset%n''          %C(bold blue)<%an>%Creset %<(80,trunc)%s'\'' --all'
 
 # History
 HISTFILE=${ZDOTDIR}/.zsh_hist
@@ -28,18 +32,12 @@ SAVEHIST=${HISTSIZE}
 export HISTSIZE SAVEHIST HISTFILE
 
 # Editor
-export EDITOR="vim"
+export EDITOR="nano"
 export VISUAL="$EDITOR"
-bindkey -v
+bindkey -e
 export KEYTIMEOUT=1
 
 # Keybinding
-## Editor Shortcut
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey "^e" edit-command-line
-
-##
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
 
@@ -61,3 +59,6 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# Display WSL
+export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0"
