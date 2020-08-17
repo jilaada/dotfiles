@@ -63,3 +63,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Display WSL
 export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0"
+
+# TMUX colour profile
+export TERM=xterm-256color
