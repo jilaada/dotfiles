@@ -24,6 +24,7 @@ alias ls='ls --color=auto -N'
 alias gs='git status'
 alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset %<(50,trunc)%s'\'' --all'
 alias gvl='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %Cgreen%aD%Creset%n''          %C(bold blue)<%an>%Creset %<(80,trunc)%s'\'' --all'
+alias weather='curl http://wttr.in/'
 
 # History
 HISTFILE=${ZDOTDIR}/.zsh_hist
