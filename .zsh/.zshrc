@@ -62,7 +62,8 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Display WSL
-export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0"
+export DISPLAY=:0.0
+# export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0"
 
 # TMUX colour profile
 export TERM=xterm-256color
