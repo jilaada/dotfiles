@@ -22,7 +22,7 @@ function zle_Line_init zle-keymap-select {
     set_prompt
     zle reset_prompt
 }
-zle -N zle-line-init
+# zle -N zle-line-init
 zle -N zle-keymap-select
 
 function prompt_jilada_setup {
